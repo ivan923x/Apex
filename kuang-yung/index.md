@@ -1,8 +1,8 @@
-# Kuang Yung After Sales Service
+# Kuang Yung After Sales Service <a id="top"/>
 
 ### **目錄**
  * [Shared Components](#shared-components)
- * [Page 0](#page-0)
+ * [Page 0 Global](#page-0-global)
  * [Page 2 handling-form-operate-index][2]
  * [Page 3 handling-form-fillin-index][3]
  * [Page 9 show][9]
@@ -28,45 +28,72 @@
 [16]: ./page16  "Go Page 16"
 [17]: ./page17  "Go Page 17"
 
----
-
 ## Shared Components
 * Lists of Values
-  1. Service_Request_Status (create)
-     1. From Scratch, Static
-     *  LOV :
-        1. 待指派, 1
-        1. 待回覆, 2
-        1. 待裁定, 3
-        1. 已解決, 4
+  1. SERVICE_REQUEST_STATUS (create)
+     1. * Create List of Values : From Scratch
+     1. * Type : Static
+     1. * LOV :
+        1. `待指派` `1`
+        1. `待回覆` `2`
+        1. `待裁定` `3`
+        1. `已解決` `4`
+  1. FILL_IN_TYPE (create)
+     1. * Create List of Values : From Scratch
+     1. * Type : Static
+     1. * LOV :
+        1. `原因分析` `1`
+        1. `臨時對策` `2`
+        1. `再發生防止` `3`
+  1. RULING_RESULT (create)
+     1. * Create List of Values : From Scratch
+     1. * Type : Static
+     1. * LOV :
+        1. `不核可` `0`
+        1. `核可` `1`
+  1. EMPLOYEE (create)
+     1. * Create List of Values : From Scratch
+     1. * Type : Dynamic
+     1. * Source Type : SQL Query
+        * Enter a SQL SELECT statement :
+          ```sql
+          SELECT name, id FROM app_employee;
+          ```
+  1. QC_STAFF (create)
+     1. * Create List of Values : From Scratch
+     1. * Type : Dynamic
+     1. * Source Type : SQL Query
+        * Enter a SQL SELECT statement :
+          ```sql
+          SELECT name, id FROM app_employee WHERE dept_id = 3;
+          ```
+  1. CUSTOMER (create)
+     1. * Create List of Values : From Scratch
+     1. * Type : Dynamic
+     1. * Source Type : SQL Query
+        * Enter a SQL SELECT statement :
+          ```sql
+          SELECT name, id FROM app_customer
+          ```
+  1. ITEM (create)
+     1. * Create List of Values : From Scratch
+     1. * Type : Dynamic
+     1. * Source Type : SQL Query
+        * Enter a SQL SELECT statement :
+          ```sql
+          SELECT name, id FROM app_item;
+          ```
 * Static Application Files
   * Upload File :
     1. main.js
     1. customize.css
 * User Interface Attributes
-  * JavaScript > File URLs : `#APP_IMAGES#customize.js?version=#APP_VERSION#` *(add)*
-  * Cascading Style Sheets > File URLs : `#APP_IMAGES#customize.css?version=#APP_VERSION#` *(add)*\
-
-
-Create Service_Request_Status
-    From Scratch, Static
-    待指派, 1
-    待回覆, 2
-    待裁定, 3
-    已解決, 4
-Create Fill_In_Type
-    From Scratch, Static
-    原因分析, 1
-    臨時對策, 2
-    再發生防止, 3
-Create Ruling_Result
-    From Scratch, Static
-    不核可, 0
-    核可, 1
-
-All Breadcrumb: Appearance / Template Options: Use Compact Style
-
----
+  * JavaScript > File URLs : `#APP_IMAGES#customize.js?version=#APP_VERSION#` (add)
+  * Cascading Style Sheets > File URLs : `#APP_IMAGES#customize.css?version=#APP_VERSION#` (add)
+* (Other)
+* Edit Logo Text => User Interface Attributes > Logo
+* Edit Lists Text => Lists > (List Details) > (Entry) > List Entry Label
+* Edit Breadcrumbs Text => Breadcrumbs > (Breadcrumb) > (Entry) > Short Name
 
 ## Page 0 Global
 
@@ -87,8 +114,6 @@ All Breadcrumb: Appearance / Template Options: Use Compact Style
    * Appearance > Template Options > Header : *Hidden*
    * Appearance > Template Options > Style : *Text Content*
 
----
-
 ## Page 1 Home
 
 #### **# UI** [▲][top]
@@ -100,8 +125,6 @@ All Breadcrumb: Appearance / Template Options: Use Compact Style
 1. Static Content : 廣穎售後服務 (after change)
    * Identification > Title : `廣穎售後服務`
 
----
-
 ## Page 9999 Login Page
 
 #### **# UI** [▲][top]
@@ -112,3 +135,6 @@ All Breadcrumb: Appearance / Template Options: Use Compact Style
 *Regions*
 1. Static Content : 廣穎售後服務 (after change)
    * Identification > Title : `廣穎售後服務`
+
+---
+All Breadcrumb: Appearance / Template Options: Use Compact Style
