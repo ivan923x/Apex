@@ -1,0 +1,62 @@
+#preview_mask {
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 2147483647;
+}
+#preview_mask img {
+    height: 75%;
+    margin: auto;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+}
+[aria-label="相關附件"] table td>img,
+[aria-label="相關附件"] table td>img {
+    height: 50px;
+    background-color: #FFF;
+    box-shadow: 0 0 1px 0 #555;
+	transition: transform .1s linear, box-shadow .1s linear;
+    cursor: pointer;
+}
+[aria-label="相關附件"] table td>img:hover,
+[aria-label="相關附件"] table td>img:hover {
+    box-shadow: 0 0 2px .5px #555;
+	transform: scale(1.1);
+	z-index: 1;
+}
+[aria-label="相關附件"] table td>span,
+[aria-label="相關附件"] table td>span {
+    line-height: 50px;
+}
+
+[aria-label="異常狀況主訴"] .t-Form-itemWrapper .a-MDEditor,
+[aria-label="原因分析"] .t-Form-itemWrapper .a-MDEditor,
+[aria-label="臨時對策"] .t-Form-itemWrapper .a-MDEditor,
+[aria-label="再發生防止"] .t-Form-itemWrapper .a-MDEditor,
+[aria-label="裁定"] .t-Form-itemWrapper .a-MDEditor {
+    margin-top: 0;
+}
+[aria-label="異常狀況主訴"] .t-Form-itemWrapper .a-MDEditor .a-MDEditor-previewPanel,
+[aria-label="裁定"] .t-Form-itemWrapper .a-MDEditor .a-MDEditor-previewPanel {
+    height: 100% !important;
+}
+[aria-label="附件上傳"] .t-Form-itemWrapper .apex-item-group {
+    margin-top: 0;
+}
+[aria-label="單位回覆"]>.t-Region-bodyWrap>.t-Region-body>[role="region"]:last-child {
+    margin-bottom: 0;
+}
+
+.page-11 [aria-label="責任確認"] .t-Region-body .container:nth-child(2) {
+    margin-top: 8px;
+}
+
+.attach-upload-btn {
+    width: 100%;
+}
