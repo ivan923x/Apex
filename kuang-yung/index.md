@@ -29,7 +29,7 @@
 [17]: ./Page17  "Go Page 17"
 
 ## Shared Components
-* Lists of Values
+* ### Lists of Values
   1. SERVICE_REQUEST_STATUS (create)
      1. * Create List of Values : From Scratch
      1. * Type : Static
@@ -83,17 +83,17 @@
           ```sql
           SELECT name, id FROM app_item;
           ```
-* Static Application Files
+* ### Static Application Files
   * Upload File :
     1. main.js
     1. customize.css
-* User Interface Attributes
+* ### User Interface Attributes
   * JavaScript > File URLs : `#APP_IMAGES#customize.js?version=#APP_VERSION#` (add)
   * Cascading Style Sheets > File URLs : `#APP_IMAGES#customize.css?version=#APP_VERSION#` (add)
-* (Other)
-* Edit Logo Text => User Interface Attributes > Logo
-* Edit Lists Text => Lists > (List Details) > (Entry) > List Entry Label
-* Edit Breadcrumbs Text => Breadcrumbs > (Breadcrumb) > (Entry) > Short Name
+* ### (Other)
+  * Edit Logo Text => User Interface Attributes > Logo
+  * Edit Lists Text => Lists > (List Details) > (Entry) > List Entry Label
+  * Edit Breadcrumbs Text => Breadcrumbs > (Breadcrumb) > (Entry) > Short Name
 
 ## Page 0 Global
 
